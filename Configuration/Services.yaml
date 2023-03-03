@@ -1,0 +1,10 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+  NITSAN\NsMigration\Command\MigrateTableCommand:
+    tags:
+      - name: console.command
+        command: 'nitsan:migration'
+        description: 'Migrate table contents'
